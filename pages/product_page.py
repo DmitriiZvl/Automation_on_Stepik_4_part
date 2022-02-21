@@ -23,9 +23,9 @@ class ProductPage(BasePage):
         assert price_1 == price_2, "prices don't match!!!"
 
     def name_comparison(self):
-        messag1 = self.browser.find_element(*ProductPageLocators.MESSAGES1).text
+        name_in_mess = self.browser.find_element(*ProductPageLocators.NAME_IN_MESSAGES).text
         name_product = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT).text
-        print('NAME1 -- ',messag1,'\nNAME2 --',name_product)
-        assert name_product in messag1, "product don't match!!!"
+        print('NAME1 -- ',name_in_mess,'\nNAME2 --',name_product)
+        assert name_product == name_in_mess, "product don't match!!!"
 
 

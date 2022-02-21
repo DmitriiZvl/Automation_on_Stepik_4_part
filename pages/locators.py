@@ -7,7 +7,7 @@ class ProductPageLocators:
     PRICE_IN_CART = (By.CSS_SELECTOR,'#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) > strong')
     PRICE_PRODUCT = (By.CSS_SELECTOR,'#content_inner > article > div.row > div.col-sm-6.product_main > p.price_color')
     NAME_PRODUCT = (By.CSS_SELECTOR,'#content_inner > article > div.row > div.col-sm-6.product_main > h1')
-    
+    NAME_IN_MESSAGES = (By.CSS_SELECTOR,'#messages > div:nth-child(1) > div > strong')
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     
