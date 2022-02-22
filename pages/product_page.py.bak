@@ -25,7 +25,12 @@ class ProductPage(BasePage):
     def name_comparison(self):
         name_in_mess = self.browser.find_element(*ProductPageLocators.NAME_IN_MESSAGES).text
         name_product = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT).text
-        print('NAME1 -- ',messag1,'\nNAME2 --',name_product)
+        print('NAME1 -- ',name_in_mess,'\nNAME2 --',name_product)
         assert name_product == name_in_mess, "product don't match!!!"
-
+        
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGES1), "Success message is presented, but should not be"
+        
+    def should_dissapear_of_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGES1), "No Success message is presented"
 
